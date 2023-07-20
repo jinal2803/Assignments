@@ -1,0 +1,73 @@
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box
+}
+body{
+    height: 100vh;
+    background-color: black;
+}
+.container{
+    border: 2px solid white;
+    width: 40%;
+    min-width: 450px;
+    position: absolute;
+    top: 5%;
+    left: 30%;
+    padding: 30px 40px;
+}
+#newtask{
+    position: relative;
+    background-color: #ffff;
+    padding: 30px 20px;
+    border-radius: 5px;
+    
+}
+#newtask input{
+    width: 70%;
+    width: 70%;
+    height: 45px;
+    font-size: 15px;
+    border: 2px solid black;
+    color: black;
+    font-weight: 550;
+    position: relative;
+    border-radius: 5px;
+    text-align: center;
+}
+#newtask input:focus{
+    outline: none;
+    border-color:orange;
+}
+#newtask button{
+    position: relative;
+    float: right;
+    width: 20%;
+    height: 45px;
+    background-color: orange;
+    color: black;
+    border-radius: 5px;
+    font-weight: 550;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+}
+.list-container {
+    margin-top: 15px;
+    border-radius: 5px;
+    background: #fff;
+    font-weight: 550;
+    font-size: 15px;
+    
+}
+.list-container .task-list{
+    padding: 15px;
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid;
+    
+    
+    
+}

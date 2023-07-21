@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slider</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.5.0/slick-theme.css"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <style>
+        body{
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        }
+        .slider-box {
+        height: 240px;
+        margin: 15px;
+        transition: all 0.3s ease-in-out;
+        }
+        .slider-box.slick-active:not(.slick-center){
+        height:260px;
+        transition: all 0.3s ease-in-out;
+        }
+        .slider-box.slick-active.slick-center{
+        height:300px;
+        transition: all 0.3s ease-in-out;
+        }
+        .slider-box.purple {
+        background: #7270d2;
+        }
+        .slider-box.green {
+        background: #57c27f;
+        }
+        .slider-box.blue {
+        background: #4a98da;
+        }
+        .slider-box.yello {
+        background: #e6d463;
+        }
+        .slider-box.red {
+        background: #dd4e42;
+        }
+        .slider-item .slick-track{
+        display: flex;
+        align-items: center;
+        }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="slider-main-wrapper">
+        <div class="container">
+          <div class="slider">
+            <div class="slider-item">
+              <div class="slider-box purple"></div>
+              <div class="slider-box green"></div>
+              <div class="slider-box blue"></div>
+              <div class="slider-box yello"></div>
+              <div class="slider-box red"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      $(".slider-item").slick({
+        centerMode: true,
+        centerPadding: "100px",
+        slidesToShow: 3,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: "40px",
+              slidesToShow: 3,
+            },
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: "40px",
+              slidesToShow: 1,
+            },
+          },
+        ],
+      });
+    </script>
+  </body>
+</html>

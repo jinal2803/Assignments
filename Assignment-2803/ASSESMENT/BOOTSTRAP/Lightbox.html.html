@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery LightBox</title>
+    <link rel="stylesheet" href="lightbox.css">
+  </head>
+  <body>
+    
+    <!-- Light box  -->
+    <div class="light-box">
+        <span id="close-btn">&#x274C;</span>
+        <img alt="img" style="width: 100%;" class="light-img" />
+      </div>
+    <!-- Header -->
+    <header>
+      <h1>Gallery with Light Box</h1>
+      
+    </header>
+    <!-- Gallery -->
+    <div class="gallery-box">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3X7M6_o5UKhUgcJrCRH-eLewlJwTx7S2l3g&usqp=CAU"
+        alt="Image"
+        id="image1"
+        onclick="zoom(0)"
+        class="image"
+      />
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAYQi_eUi4Qx-4fD5n8O9K3l0R4Ioior4xNA&usqp=CAU"
+        alt="Image"
+        id="image2"
+        onclick="zoom(1)"
+        class="image"
+      />
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9-dwPCojBZn2aknJSAsUqCak0JawhwkOGBA&usqp=CAU"
+        alt="Image"
+        id="image3"
+        onclick="zoom(2)"
+        class="image"
+      />
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxkQJ-drVC5STAa3WwtRKz2C5JPEdw6B7LBw&usqp=CAU"
+        alt="Image"
+        id="image4"
+        onclick="zoom(3)"
+        class="image"
+      />
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPjgccrvO1283cHp6zBegPWWI3xy9jQpRDQFdF6-cVm_NDADhO-_OWa4WRyYxXy3xc5dQ&usqp=CAU"
+        alt="Image"
+        id="image5"
+        onclick="zoom(4)"
+        class="image"
+      />
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr0KlBSbrqczzs1JruUhiB6dR1Zem4EjU42Q&usqp=CAU"
+        alt="Image"
+        id="image6"
+        onclick="zoom(5)"
+        class="image"
+      />
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeAiGzbVt6xkyr9dVcX65KFSsoBvPwNbxN6hUh_-PIYCujUpHtVZC4z4XslG0zufJhjTU&usqp=CAU"
+        id="image7"
+        onclick="zoom(6)"
+        class="image"
+      />
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgTgimh6wCwaGQ_vDvXq9fXT-s4zlQFAtB413QlUaII-WWi-gayB-ZIkbrcT_YLbWtmR8&usqp=CAU"
+        alt="Image"
+        id="image8"
+        onclick="zoom(7)"
+        class="image"
+      />
+    </div>
+    <!-- JS -->
+    <script>
+        
+        
+        let preloader = document.querySelector(".preloader");
+function loading() {
+  preloader.style.display = "none";
+}
+
+let images = document.querySelectorAll(".image");
+let lightBox = document.querySelector(".light-box");
+let closeBtn = document.querySelector("#close-btn");
+
+function zoom(index) {
+  let imgSrc = images[index].src;
+  let lightImage = document.querySelector(".light-img");
+  lightImage.setAttribute("src", imgSrc);
+  lightBox.style.display = "block";
+}
+
+// Close
+closeBtn.addEventListener("click", function () {
+  lightBox.style.display = "none";
+});
+    </script>
+  </body>
+</html>

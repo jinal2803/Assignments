@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+     <!-- style start -->
+    <style>
+        body *{
+            border: 2px solid black;
+           display: block;
+           padding: 20px;
+           
+        }
+    </style>
+</head>
+ <!-- html start -->
+<body> (body) (great-great-grandparent) 
+    <div> div (great-grandparent)
+        <ul> ul grand perent
+            <li>li directparent
+             <span>span</span>
+           </li>
+        </ul>
+    </div>
+    <!-- script -->
+    <script>
+        $(document).ready(function () {
+            $("span").parentsUntil().css({"border":"2px solid red"})
+            
+        })
+    </script>
+    <!-- script end -->
+</body>
+</html>

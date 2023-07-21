@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins";
+        }
+
+        #header {
+            height: 100px;
+            background-color: #daac00;
+
+
+        }
+
+        #logo {
+            float: left;
+            padding: 10px 85px;
+
+        }
+
+
+        #link {
+            font-size: 29px;
+
+            font-weight: 500;
+            font-family: "Poppins";
+            text-align: center;
+            padding: 20px;
+        }
+
+        #l1 {
+            text-decoration: none;
+            padding: 20px;
+            color: #ffffff;
+
+        }
+
+
+        #search {
+
+            height: 32px;
+            font-size: 21px;
+            font-family: "Poppins";
+            text-align: left;
+            width: 150px;
+            filter: drop-shadow(7.512px 14.127px 9px rgba(74, 74, 74, 0.1));
+            background-color: #fcc302;
+            border: none;
+
+        }
+
+        .search-container {
+            float: right;
+
+        }
+
+
+        .search-container button {
+            float: right;
+            padding: 6px 12px;
+            margin-top: 4px;
+            margin-right: 150px;
+            background-color: #00bec9;
+            font-size: 17px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #main-banner {
+            background-color: #fcc302;
+            
+
+        }
+
+        h1 {
+            font-size: 67px;
+            letter-spacing: 1px;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 29px;
+            letter-spacing: 0px;
+            color: #ffffff;
+            font-weight: 400;
+        }
+
+        .left-content {
+            float: left;
+            margin: 90px;
+            
+            
+        }
+
+        .links {
+            padding: 40px;
+            padding-left: 0;
+
+
+        }
+
+        #button01 {
+
+            padding: 12px;
+            border-radius: 10px;
+            background-color: #00bec9;
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        #button02 {
+
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #daac00;
+            border: 2px solid #ffffff;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .right-content img {
+            height: 500px;
+            
+        }
+
+        #main-banner1 {
+            background-color: #ffffff;
+            margin: 80px;
+            height: 400px;
+            
+            
+        }
+
+        .h12 {
+            font-size: 50px;
+            color: #313243;
+            font-weight: 600;
+        }
+
+        .p12 {
+            font-size: 29px;
+            letter-spacing: 0px;
+            color: #313243;
+            font-weight: 400;
+            
+        }
+
+        #button03 {
+            padding: 12px;
+            color: #ffffff;
+            border-radius: 7px;
+            background-color: #fcc302;
+            text-decoration: none;
+        }
+
+        .left-content1 {
+            float: left;
+            padding: 0px 88px;
+            width: 60%;
+            
+        }
+
+        .right-content1 {
+            position: relative;
+            float: right;
+            width: 40%;
+        }
+
+        .smallbox {
+            width: 50%;
+            height: 50%;
+            background-color: #fcc302;
+            position: absolute;
+            bottom: -20px;
+            left: -20px;
+            /* z-index: -1; */
+
+        }
+
+        .right-content1 img.overlayimg {
+            max-width: 100%;
+            
+            position: relative;
+            z-index: 1;
+
+        }
+
+        .right-content1 .overlay {
+            background-color: rgba(218, 172, 0, 0.5686274509803921);
+            width: 100%;
+            height: 100%;
+            opacity: 0.6;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index:1;
+
+        }
+        
+        .circle {
+            background-color: #ffffff;
+            position: absolute;
+            top: 46.5%;
+            left: 46%;
+            width: 10%;
+            height: 10%;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .triangle {
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 1;
+        }
+
+        #main-banner2 {
+            background-color: #fcc302;
+            clear: both;
+        }
+
+        .h13 {
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .p13 {
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        #bottom-content img {
+            height: 300px;
+        }
+
+        #bottom-content {
+            align-items: center;
+        }
+
+        h2 {
+            font-size: 30px;
+            color: #ffffff;
+            font-weight: 600;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .bottomp1 {
+            font-size: 22px;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .flex-container .image-item {
+            margin: 0 auto;
+        }
+
+        /* Responsive layout - makes a one column layout instead of a two-column layout */
+        @media (max-width: 800px) {
+            .flex-container {
+                flex-direction: column;
+                
+            }
+        }
+
+        #main-banner3 {
+            background-color: #ffffff;
+            margin: 80px;
+            /* clear: both; */
+            float: left;
+
+        }
+
+        .left-content2 {
+            float: left;
+            position: relative;
+            width: 40%;
+
+        }
+
+        .left-content2 img.overlayimg {
+            /* height: 360px; */
+            max-width: 100%;
+            position: relative;
+            z-index: 1;
+
+        }
+
+        .smallbox2 {
+            width: 50%;
+            height: 50%;
+            background-color: #fcc302;
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            
+        }
+
+        .left-content2 .overlay2 {
+            opacity: 0.569;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(218, 172, 0, 0.5686274509803921);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+
+        }
+
+        .circle1 {
+            background-color: #ffffff;
+            position: absolute;
+            top: 46.5%;
+            left: 46.5%;
+            width: 10%;
+            height: 10%;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .triangle1 {
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 1;
+        }
+
+        .right-content2 {
+            float: right;
+            padding: 20px 88px;
+            width: 60%;
+            text-align: end;
+
+        }
+
+        .h14 {
+            font-size: 50px;
+            color: #313243;
+            font-weight: 600;
+            
+        }
+
+        .p14 {
+            font-size: 29px;
+            letter-spacing: 0px;
+            color: #313243;
+            font-weight: 400;
+            
+        }
+
+        #button04 {
+            padding: 12px;
+            border-radius: 7px;
+            background-color: #fcc302;
+            text-decoration: none;
+            color: white;
+        }
+
+        .button001 {
+            text-align: right;
+        }
+
+        #main-banner4 {
+            padding: 20px;
+            background-color: #fcc302;
+            clear: both;
+
+        }
+
+        .p15 {
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .h15 {
+            color: #ffffff;
+            text-align: center;
+        }
+
+        #bottom-content1 img {
+            height: 300px;
+
+        }
+
+        #bottom-content1 {
+            align-items: center;
+        }
+
+        .flex-container1 {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .flex-container1 .image-item1 {
+            margin: 0 auto;
+        }
+
+        @media (max-width: 800px) {
+            .flex-container1 {
+                flex-direction: column;
+            }
+        }
+
+        .p16 {
+            font-size: 35px;
+            color: #ffffff;
+            font-weight: 400;
+            text-align: center;
+            padding: 2px;
+        }
+
+        #buy {
+            padding: 10px 40px;
+            border-radius: 30px;
+            background-color: #00bec9;
+            text-decoration: none;
+            margin-left: 70px;
+            font-size: large;
+        }
+
+        #main-banner5 {
+            margin: 20px;
+            background-color: #ffffff;
+        }
+
+        .h16 {
+            font-size: 65px;
+            color: #313243;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .p17 {
+            font-size: 25px;
+            color: #313243;
+            text-align: center;
+            padding: 20px;
+        }
+
+        #bottom-content2 img {
+            height: 300px;
+        }
+
+        .flex-container2 {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .flex-container2 .image-item2 {
+            margin: 0 auto;
+        }
+
+        @media (max-width: 800px) {
+            .flex-container2 {
+                flex-direction: column;
+            }
+        }
+
+        h3 {
+            font-size: 25px;
+            color: #313243;
+            font-weight: 600;
+            text-align: center;
+            padding: 2px;
+        }
+
+        .p18 {
+            font-size: 20px;
+            color: black;
+            font-weight: 200;
+            text-align: center;
+            padding: 5px;
+        }
+
+        .P19 {
+            text-align: center;
+        }
+
+        .fa-instagram {
+            color: white;
+            padding: 7px;
+            border-radius: 50%;
+            background-color: #daac00;
+
+        }
+
+        .fa-facebook {
+            color: white;
+            padding: 7px;
+            border-radius: 50%;
+            background-color: #daac00;
+        }
+
+        .fa-twitter {
+            color: white;
+            padding: 7px;
+            border-radius: 50%;
+            background-color: #daac00;
+        }
+
+        .fa-whatsapp {
+            color: white;
+            padding: 7px;
+            border-radius: 50%;
+            background-color: #daac00;
+        }
+
+        #main-banner6 {
+            position: relative;
+        }
+
+        #main-banner6 img {
+            width: 100%;
+        }
+        
+
+        .m1 .overlay3 {
+            background-color: rgba(252, 195, 2, 0.8392156862745098);
+            width: 100%;
+            height: 100%;
+            opacity: 0.839;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        @media (max-width: 800px) {
+            .flex-container3 {
+                flex-direction: column;
+            }
+        }
+
+        #m2 {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .flex-container3 {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .extra1 img {
+            height: 100px;
+        }
+
+        .extra1 {
+            margin: 30% 30%;
+            text-align: center;
+        }
+
+        #main-banner7 {
+
+            background-color: #ffffff;
+            padding: 30px;
+        }
+
+        .h27 {
+            font-size: 60px;
+            color: #313243;
+            text-align: center;
+        }
+
+        .p20 {
+            font-size: 28px;
+            color: #313243;
+            text-align: center;
+        }
+
+        .img1 img {
+            height: 260px;
+        }
+
+
+        #bottomimg {
+            width: 270px;
+            height: 550px;
+            background-color: #f3f3f3;
+            border: 2px solid #d6d6d6;
+
+        }
+
+        #bottoming1 {
+            width: 270px;
+            height: 550px;
+            filter: drop-shadow(5.634px 10.595px 25.5px rgba(74, 74, 74, 0.1));
+            background-color: #ffffff;
+        }
+
+        .flex-container4 {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .flex-container4 .img1 {
+            margin: 0 auto;
+        }
+
+        @media (max-width: 800px) {
+            .flex-container4 {
+                flex-direction: column;
+            }
+        }
+
+        .h22 {
+            font-size: 25px;
+            color: #313243;
+            text-align: start;
+        }
+
+        .p21 {
+            font-size: 17px;
+            color: #00bec9;
+        }
+
+        .p22 {
+            font-size: 17px;
+            color: #313243;
+            font-weight: 400;
+        }
+
+        .p23 {
+            font-size: 21px;
+            color: #00bec9;
+            font-weight: 500;
+        }
+
+        #footer {
+            padding: 50px 50px;
+            background-color: #343434;
+
+
+        }
+
+        #foot {
+
+            font-size: 38px;
+            color: #ffffff;
+            text-decoration: none;
+            float: left;
+
+        }
+
+        #f1 {
+            font-size: 25px;
+            line-height: 44px;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .flex-container5 {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .flex-container5 .footer1 {
+            margin: 0 auto;
+        }
+
+        @media (max-width: 800px) {
+            .flex-container5 {
+                flex-direction: column;
+            }
+        }
+
+        #foot1 {
+            font-size: 38px;
+            line-height: 8px;
+            color: #ffffff;
+            text-align: right;
+
+        }
+
+        .p24 {
+            font-size: 24px;
+            color: #ffffff;
+        }
+
+        #f2 {
+            width: 400px;
+            height: 60px;
+            background-color: #daac00;
+            position: absolute;
+
+
+        }
+
+        #f3 {
+            width: 100px;
+            height: 60px;
+            background-color: #00bec9;
+            position: relative;
+            left: 300px;
+        }
+
+        #f4 {
+            position: relative;
+            left: 230px;
+            top: 12px;
+        }
+
+        #insta {
+            color: black;
+            padding: 12px;
+            border-radius: 50%;
+            background-color: white;
+        }
+
+        #facebook {
+            color: black;
+            padding: 12px;
+            border-radius: 50%;
+            background-color: white;
+        }
+
+        #twitter {
+            color: black;
+            padding: 12px;
+            border-radius: 50%;
+            background-color: white;
+        }
+
+        #whatsapp {
+            color: black;
+            padding: 12px;
+            border-radius: 50%;
+            background-color: white;
+        }
+
+        .p25 {
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div id="logo">
+            <img src="logo.svg" alt="">
+        </div>
+        <div id="link">
+            <a href="" id="l1">Home</a>
+            <a href="" id="l1">About</a>
+            <a href="" id="l1">Service</a>
+            <a href="" id="l1">Contact</a>
+            <div class="search-container">
+                <form action="/action_page.php">
+                    <input type="text" placeholder="Search.." name="search" id="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="main-banner">
+        <div class="left-content">
+            <h1>First I wanted to be <br> a veterinarian</h1>
+            <p class="banner-intro">Lorem Ipsum available but the majority have <br> suffered alteration in some form,
+                by
+                injected <br> humour randomised words</p>
+            <div class="links">
+                <a href="button" id="button01">Contact Us</a>
+                <a href="button" id="button02">Our Service</a>
+            </div>
+        </div>
+
+        <div class="right-content">
+            <img src="dog img.svg" alt="">
+        </div>
+    </div>
+    <div id="main-banner1">
+        <div class="left-content1">
+            <h1 class="h12">As a veterinarian and  lover of animals.</h1>
+            <p class="p12">
+                Lorem ispum available but the majority  suffered alteration in some form, by 
+                humour randomised words.
+            </p> <br>
+            <div><a href="button" id="button03">Our Service</a></div>
+        </div>
+
+        <div class="right-content1">
+            <img src="dog11.svg" alt="" class="overlayimg">
+            <span class="smallbox"></span>
+            <div class="overlay"></div>
+            <span class="circle"></span>
+            <img src="Icon (1)-triangle.svg" alt="" class="triangle">
+        </div>
+    </div>
+    <div id="main-banner2">
+        <div class="top-content">
+            <h1 class="h13">Title Here</h1>
+            <p class="p13">Lorem ispum available but the majority have <br> suffered alteration in some form</p>
+        </div>
+
+        <div id="bottom-content" class="flex-container">
+            <div class="image-item">
+                <img src="dog1.svg" alt="">
+                <h2>Veterinarian</h2>
+                <p class="bottomp1">Lorem ispum available but <br> the majority have suffered <br> alteration in some
+                </p>
+            </div>
+            <div class="image-item">
+                <img src="dog2.svg" alt="">
+                <h2>Vaccination Care</h2>
+                <p class="bottomp1">Lorem ispum available but <br> the majority have suffered <br> alteration in some
+                </p>
+            </div>
+            <div class="image-item">
+                <img src="dog3.svg" alt="">
+                <h2>Dental Care</h2>
+                <p class="bottomp1">Lorem ispum available but <br> the majority have suffered <br> alteration in some
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="main-banner3">
+        <div class="left-content2">
+            <img src="dogimg4.svg" alt="" class="overlayimg">
+            <span class="smallbox2"></span>
+            <div class="overlay2"></div>
+            <span class="circle1"></span>
+            <img src="icon22.svg" alt="" class="triangle1">
+        </div>
+        <div class="right-content2">
+            <h1 class="h14">As a veterinarian and  lover of animals</h1>
+            <p class="p14">Lorem ispum available but the majority suffered alteration in some form, by <br>humour
+                randomised words</p> <br>
+            <div class="button001"><a href="button" id="button04">Our Service</a></div>
+        </div>
+    </div>
+    <div id="main-banner4">
+        <div class="top-content1">
+            <h1 class="h15">Title Here</h1>
+            <p class="p15">Lorem ispum available but the majority have <br> suffered alteration in some form.</p>
+        </div>
+        <div id="bottom-content1" class="flex-container1">
+            <div class="image-item1">
+                <img src="dogimg main5-1.svg" alt="">
+                <p class="p16">$50 $30</p> <br>
+                <a href="button" id="buy">Buy Now</a>
+            </div>
+
+            <div class="image-item1">
+                <img src="dogimg main-5-2.svg" alt="">
+                <p class="p16">$40 $25</p> <br>
+                <a href="button" id="buy">Buy Now</a>
+            </div>
+            <div class="image-item1">
+                <img src="dogimg main5-3.svg" alt="">
+                <p class="p16"> $45 $20</p> <br>
+                <a href="button" id="buy">Buy Now</a>
+            </div>
+        </div>
+    </div>
+    <div id="main-banner5">
+        <div class="top-content2">
+            <h1 class="h16">The vetcare team</h1>
+            <p class="p17">Lorem ispum available but the majority have <br> suffered alteration in some form.</p>
+        </div>
+        <div id="bottom-content2" class="flex-container2">
+            <div class="image-item2">
+                <img src="doc1.svg" alt="">
+                <h3>Jennifer Mullen</h3>
+                <p class="p18">VETERINARY</p>
+                <P class="P19">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-whatsapp"></i>
+                </P>
+
+            </div>
+            <div class="image-item2">
+                <img src="doc2.svg" alt="">
+                <h3>Sheeren Collins</h3>
+                <p class="p18">ADMINISTRATION</p>
+                <P class="P19">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-whatsapp"></i>
+                </P>
+            </div>
+            <div class="image-item2">
+                <img src="doc3.svg" alt="">
+                <h3>Jennifer Mullen</h3>
+                <p class="p18">VETERINARY</p>
+                <P class="P19">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-whatsapp"></i>
+                </P>
+            </div>
+        </div>
+    </div>
+    <div id="main-banner6">
+        <div class="m1">
+            <img src="main07dogimg.svg" alt="">
+            <div class="overlay3"></div>
+        </div>
+
+        <div id="m2" class="flex-container3">
+            <div class="extra1">
+                <img src="heart+.svg" alt="" id="heart">
+                <p class="number1">+34793</p>
+                <p class="happy">HappyClients</p>
+            </div>
+            <div class="extra1">
+                <img src="imginjection.svg" alt="" id="injection">
+                <p class="number1">+45382</p>
+                <p class="happy">Departament</p>
+            </div>
+            <div class="extra1">
+                <img src="imgstethoscop.svg" alt="" id="stethoscop">
+                <p class="number1">+54762</p>
+                <p class="happy">Vaccination</p>
+            </div>
+        </div>
+    </div>
+    <div id="main-banner7">
+        <div id="top-content3">
+            <h2 class="h27">Recent Posts</h2>
+            <p class="p20">Lorem ispum available but the majority have <br> suffered alteration in some form.</p>
+        </div>
+
+        <div id="bottom-content3" class="flex-container4">
+            <div class="img1">
+                <div id="bottomimg"><img src="main08-1.svg" alt=""><br>
+                    <h2 class="h22">As a veterian and <br> lover of animals </h2><br>
+                    <p class="p21">FEBRUARY 09, 2020</p><br>
+                    <P class="p22">Lorem Ipsum available, but the majo <br> rity have suffered alteration in
+                        some <br> words which look. </P>
+                    <br>
+                    <p class="p23">Read more+</p>
+                </div>
+            </div>
+            <div class="img1">
+                <div id="bottomimg1"> <img src="main08-2.svg" alt="">
+                    <h2 class="h22">As a veterian and <br> lover of animals </h2><br>
+                    <p class="p21">FEBRUARY 10, 2020</p><br>
+                    <P class="p22">Lorem Ipsum available, but the majo <br> rity have suffered alteration in
+                        some <br> words which look. </P>
+                    <br>
+                    <p class="p23">Read more+</p>
+                </div>
+            </div>
+            <div class="img1">
+                <div id="bottomimg"><img src="main08-3.svg" alt="">
+                    <h2 class="h22">As a veterian and <br> lover of animals </h2><br>
+                    <p class="p21">FEBRUARY 11, 2020</p><br>
+                    <P class="p22">Lorem Ipsum available, but the majo <br> rity have suffered alteration in
+                        some <br> words which look. </P>
+                    <br>
+                    <p class="p23">Read more+</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div id="footer" class="flex-container5">
+        <div class="footer1" id="footer1">
+            <h2><a href="" id="foot">About</a></h2><br><br>
+            <p></p><a href="" id="f1">History</a></p>
+            <p><a href="" id="f1">Our Team</a></p>
+            <p><a href="" id="f1">Brand Guidelines</a></p>
+            <p><a href="" id="f1">Terms&Condition</a></p>
+            <p><a href="" id="f1">Privacy Policy</a></p>
+        </div>
+        <div class="footer1" id="footer2">
+            <h2><a href="" id="foot">Services</a></h2><br><br>
+            <p></p><a href="" id="f1">How to order</a></p>
+            <p><a href="" id="f1">Our product</a></p>
+            <p><a href="" id="f1">Order status</a></p>
+            <p><a href="" id="f1">Promo</a></p>
+            <p><a href="" id="f1">Payment Method</a></p>
+        </div>
+        <div class="footer1" id="footer3">
+            <h2 id="foot1">Title Here</h2><br> <br>
+            <p class="p24">Lorem Ipsum available, but the majority</p><br> <br> <br>
+            <input type="text" id="f2">
+            <input type="text" id="f3">
+            <img src="footer img.svg" alt="" id="f4"> <br><br><br>
+            <p class="p25">
+                <i class="fa-brands fa-instagram" id="insta"></i>
+                <i   class="fa-brands fa-facebook" id="facebook"></i>
+                <i class="fa-brands fa-twitter" id="twitter"></i>
+                <i class="fa-brands fa-whatsapp" id="whatsapp"></i>
+            </p>
+        </div>
+    </div>
+    </div>
+
+    </div>
+</body>
+
+</html>
